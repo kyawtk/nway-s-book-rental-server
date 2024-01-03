@@ -1,0 +1,263 @@
+[
+    {
+        "name": "The Catcher in the Rye",
+        "isAvailable": true,
+        "author": "J.D. Salinger",
+        "price": 19.99,
+        "genre": "Fiction",
+        "image": "catcher-in-the-rye.jpg",
+        "description": "A classic novel about the struggles of growing up."
+      },
+      {
+        "name": "To Kill a Mockingbird",
+        "isAvailable": true,
+        "author": "Harper Lee",
+        "price": 24.99,
+        "genre": "Classic",
+        "image": "to-kill-a-mockingbird.jpg",
+        "description": "A powerful story of racial injustice and moral growth."
+      },
+      {
+        "name": "1984",
+        "isAvailable": false,
+        "author": "George Orwell",
+        "price": 29.99,
+        "genre": "Dystopian",
+        "image": "1984.jpg",
+        "description": "A dystopian novel depicting a totalitarian society."
+      },
+      {
+        "name": "The Great Gatsby",
+        "isAvailable": true,
+        "author": "F. Scott Fitzgerald",
+        "price": 22.99,
+        "genre": "Classic",
+        "image": "the-great-gatsby.jpg",
+        "description": "A novel about the American Dream and the Roaring Twenties."
+      },
+      {
+        "name": "Harry Potter and the Philosopher's Stone",
+        "isAvailable": true,
+        "author": "J.K. Rowling",
+        "price": 32.99,
+        "genre": "Fantasy",
+        "image": "harry-potter.jpg",
+        "description": "The first book in the magical Harry Potter series."
+      },
+      {
+        "name": "The Hobbit",
+        "isAvailable": true,
+        "author": "J.R.R. Tolkien",
+        "price": 26.99,
+        "genre": "Fantasy",
+        "image": "the-hobbit.jpg",
+        "description": "The classic fantasy novel that takes you on an epic adventure."
+      },
+      {
+        "name": "Pride and Prejudice",
+        "isAvailable": true,
+        "author": "Jane Austen",
+        "price": 21.99,
+        "genre": "Romance",
+        "image": "pride-and-prejudice.jpg",
+        "description": "A timeless love story set in the early 19th century."
+      },
+      {
+        "name": "The Lord of the Rings",
+        "isAvailable": true,
+        "author": "J.R.R. Tolkien",
+        "price": 34.99,
+        "genre": "Fantasy",
+        "image": "lord-of-the-rings.jpg",
+        "description": "A trilogy that follows the quest to destroy the One Ring."
+      },
+      {
+        "name": "The Da Vinci Code",
+        "isAvailable": true,
+        "author": "Dan Brown",
+        "price": 27.99,
+        "genre": "Mystery",
+        "image": "the-da-vinci-code.jpg",
+        "description": "A captivating mystery that unravels hidden secrets of art and religion."
+      },
+      {
+        "name": "The Shining",
+        "isAvailable": true,
+        "author": "Stephen King",
+        "price": 25.99,
+        "genre": "Horror",
+        "image": "the-shining.jpg",
+        "description": "A psychological horror novel set in an isolated hotel."
+      },
+      {
+        "name": "The Hunger Games",
+        "isAvailable": true,
+        "author": "Suzanne Collins",
+        "price": 28.99,
+        "genre": "Dystopian",
+        "image": "the-hunger-games.jpg",
+        "description": "A thrilling dystopian novel about survival and rebellion."
+      },
+      {
+        "name": "Brave New World",
+        "isAvailable": true,
+        "author": "Aldous Huxley",
+        "price": 23.99,
+        "genre": "Dystopian",
+        "image": "brave-new-world.jpg",
+        "description": "A classic dystopian novel that explores a future society."
+      },
+      {
+        "name": "Moby-Dick",
+        "isAvailable": true,
+        "author": "Herman Melville",
+        "price": 31.99,
+        "genre": "Adventure",
+        "image": "moby-dick.jpg",
+        "description": "An epic tale of obsession and revenge on the high seas."
+      },
+      {
+        "name": "The Hitchhiker's Guide to the Galaxy",
+        "isAvailable": true,
+        "author": "Douglas Adams",
+        "price": 20.99,
+        "genre": "Science Fiction",
+        "image": "hitchhikers-guide.jpg",
+        "description": "A comedic science fiction series about an accidental space traveler."
+      },
+      {
+        "name": "Alice's Adventures in Wonderland",
+        "isAvailable": true,
+        "author": "Lewis Carroll",
+        "price": 18.99,
+        "genre": "Fantasy",
+        "image": "alices-adventures.jpg",
+        "description": "A whimsical journey through a fantastical world."
+      },
+      {
+        "name": "One Hundred Years of Solitude",
+        "isAvailable": true,
+        "author": "Gabriel García Márquez",
+        "price": 29.99,
+        "genre": "Magical Realism",
+        "image": "one-hundred-years.jpg",
+        "description": "A landmark novel that blends magic and reality in the fictional town of Macondo."
+      },
+      {
+        "name": "The Alchemist",
+        "isAvailable": true,
+        "author": "Paulo Coelho",
+        "price": 26.99,
+        "genre": "Philosophical Fiction",
+        "image": "the-alchemist.jpg",
+        "description": "A philosophical novel about the journey to find one's destiny."
+      },
+      {
+        "name": "Sapiens: A Brief History of Humankind",
+        "isAvailable": true,
+        "author": "Yuval Noah Harari",
+        "price": 32.99,
+        "genre": "History",
+        "image": "sapiens.jpg",
+        "description": "An exploration of the history and impact of Homo sapiens."
+      },
+      {
+        "name": "The Girl on the Train",
+        "isAvailable": true,
+        "author": "Paula Hawkins",
+        "price": 24.99,
+        "genre": "Thriller",
+        "image": "girl-on-the-train.jpg",
+        "description": "A psychological thriller about obsession and deception."
+      },
+      {
+        "name": "The Chronicles of Narnia",
+        "isAvailable": true,
+        "author": "C.S. Lewis",
+        "price": 28.99,
+        "genre": "Fantasy",
+        "image": "narnia.jpg",
+        "description": "A series of classic fantasy novels set in the magical land of Narnia."
+      },
+      {
+        "name": "The Road",
+        "isAvailable": true,
+        "author": "Cormac McCarthy",
+        "price": 27.99,
+        "genre": "Post-apocalyptic",
+        "image": "the-road.jpg",
+        "description": "A father and son's journey through a desolate, post-apocalyptic world."
+      },
+      {
+        "name": "The Kite Runner",
+        "isAvailable": true,
+        "author": "Khaled Hosseini",
+        "price": 26.99,
+        "genre": "Historical Fiction",
+        "image": "kite-runner.jpg",
+        "description": "A powerful tale of friendship, betrayal, and redemption in Afghanistan."
+      },
+      {
+        "name": "The Count of Monte Cristo",
+        "isAvailable": true,
+        "author": "Alexandre Dumas",
+        "price": 30.99,
+        "genre": "Adventure",
+        "image": "count-of-monte-cristo.jpg",
+        "description": "A classic adventure novel of revenge and justice."
+      },
+      {
+        "name": "The Silent Patient",
+        "isAvailable": true,
+        "author": "Alex Michaelides",
+        "price": 22.99,
+        "genre": "Psychological Thriller",
+        "image": "silent-patient.jpg",
+        "description": "A psychological thriller with a shocking twist."
+      },
+      {
+        "name": "The Art of War",
+        "isAvailable": true,
+        "author": "Sun Tzu",
+        "price": 18.99,
+        "genre": "Philosophy",
+        "image": "art-of-war.jpg",
+        "description": "A classic work on military strategy and philosophy."
+      },
+      {
+        "name": "The Picture of Dorian Gray",
+        "isAvailable": true,
+        "author": "Oscar Wilde",
+        "price": 23.99,
+        "genre": "Gothic Fiction",
+        "image": "dorian-gray.jpg",
+        "description": "A novel about the consequences of a life of decadence and excess."
+      },
+      {
+        "name": "The Odyssey",
+        "isAvailable": true,
+        "author": "Homer",
+        "price": 25.99,
+        "genre": "Epic Poetry",
+        "image": "odyssey.jpg",
+        "description": "An epic poem that follows the adventures of Odysseus on his journey home."
+      },
+      {
+        "name": "The Martian",
+        "isAvailable": true,
+        "author": "Andy Weir",
+        "price": 21.99,
+        "genre": "Science Fiction",
+        "image": "the-martian.jpg",
+        "description": "A gripping tale of survival on Mars."
+      },
+      {
+        "name": "Wuthering Heights",
+        "isAvailable": true,
+        "author": "Emily Brontë",
+        "price": 27.99,
+        "genre": "Gothic Fiction",
+        "image": "wuthering-heights.jpg",
+        "description": "A dark and passionate tale of love and revenge on the Yorkshire moors."
+      }
+]
