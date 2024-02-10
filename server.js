@@ -6,14 +6,15 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import config from "config";
 import cors from "cors";
+import cookieParser from 'cookie-parser'
 import AppError from "./utils/appError.js";
 import errorHandler from "./controllers/error.controller.js";
 
 import books from "./routers/books.router.js";
 import users from './routers/users.router.js'
-
+import categories from './routers/categories.router.js'
 process.on("uncaughtException", (err) => {
-  console.log(err.name, err.message);
+console.log(err.name, err.message);
  process.exit(1)
 });
 //Configuration
@@ -41,6 +42,7 @@ if (process.env.NODE_ENV == "development") {
 
 app.use("/users", users)
 app.use("/books", books);
+app.use("/categories", categories);
 
 // Respond not found to all the wrong routes
 app.use(function (req, res, next) {

@@ -1,0 +1,22 @@
+[
+  { "name": "Fiction" },
+  { "name": "Non-Fiction" },
+  { "name": "Mystery/Thriller" },
+  { "name": "Science Fiction" },
+  { "name": "Fantasy" },
+  { "name": "Romance" },
+  { "name": "Historical Fiction" },
+  { "name": "Biography/Memoir" },
+  { "name": "Self-Help/Personal Development" },
+  { "name": "Science" },
+  { "name": "Philosophy" },
+  { "name": "Religion/Spirituality" },
+  { "name": "Travel" },
+  { "name": "Cookbooks" },
+  { "name": "Poetry" },
+  { "name": "Graphic Novels/Comics" },
+  { "name": "Children's Books" },
+  { "name": "Business/Economics" },
+  { "name": "Psychology" },
+  { "name": "Environmental/Science Journalism" }
+]

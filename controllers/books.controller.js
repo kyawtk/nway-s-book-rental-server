@@ -2,73 +2,74 @@ import Book from "../models/book.model.js";
 import ApiFeatures from "../utils/apiFeatures.js";
 import { catchAsync } from "../utils/catchAsync.js";
 import AppError from "../utils/appError.js";
+import {
+  creatDocument,
+  deleteDocumentById,
+  getDocumentById,
+  updateDocumentById,
+} from "./controllerFactory.js";
+import User from "../models/user.model.js";
+
+// export const getBooks = catchAsync(async (req, res, next) => {
+//   // let apiFeatures = new ApiFeatures(Book.find(), req.query)
+//   // .filter()
+//   // .sort()
+//   // .paginate();
+
+//   // let data = await apiFeatures.query;
+//   let data = await Book.find();
+
+//   res.status(200).json({
+//     status: "success",
+//     data: {
+//       books: data,
+//     },
+//   });
+// });
+
 
 export const getBooks = catchAsync(async (req, res, next) => {
-  let apiFeatures = new ApiFeatures(Book.find(), req.query)
-    .filter()
-    .sort()
-    .paginate();
+  let query = req.query.search || ''; // Assuming search parameter is part of the request query
 
-  let data = await apiFeatures.query;
+  // Add search criteria to find books
+  let data = await Book.find({
+    $or: [
+      { name: { $regex: new RegExp(query, 'i') } },
+      { author: { $regex: new RegExp(query, 'i') } },
+      // Add more fields to search if needed
+    ],
+  });
 
   res.status(200).json({
-    status: "success",
+    status: 'success',
     data: {
       books: data,
     },
   });
 });
-export const getBookById = catchAsync(async (req, res, next) => {
-  let id = req.params.id;
 
-  let data = await Book.findById(id);
-  if (!data) {
-    return next(new AppError("Book not Found", 404));
-  }
 
-  res.status(200).json(data);
+export const bookBook = catchAsync(async (req, res, next) => {
+  
+  const { bookIds } = req.body;
+  const userId = req.user._id;
+  // // Update books
+  const bookUpdates = bookIds.map(async (bookId) => {
+    return Book.findByIdAndUpdate(bookId, { bookedBy: userId , isAvailable:false });
+  });
+
+  // Wait for all book updates to complete
+  await Promise.all(bookUpdates);
+
+  // Update user's booked books using $addToSet to ensure uniqueness
+  await User.findByIdAndUpdate(userId, {
+    bookedBookes:[...bookIds]
+  });
+
+  res.status(200).json({ status: 200, message: "Booked" });
+  // res.status(200).json({ status: 200, message: "Booked" })
 });
-
-export const postBook = catchAsync(async(req, res, next) => {
-  console.log(y)
-  let payload = req.body;
-  console.log(payload);
-  let data =await Book.create(payload);
-  res.json({ message: "success", data });
-});
-
-export const updateBookById = catchAsync(async (req, res, next) => {
-  let id = req.params.id;
-  if (!id) {
-    res.status(400).json({ message: "Invalid request. Id is missing." });
-  }
-
-  var book = await Book.findById(id);
-  if (!book) {
-    res.status(404).json({ message: "Book not found." });
-  } else {
-    if (book.isAvailable == false) {
-      return res.status(200).json({ message: "Book is not available." });
-    } else {
-      const updatedResult = await Book.findByIdAndUpdate(
-        { _id: id },
-        {
-          isAvailable: false,
-        }
-      );
-      res.json(updatedResult);
-    }
-  }
-});
-
-export const deleteBookById = catchAsync(async (req, res, next) => {
-  const id = req.params.id;
-  if (!id) {
-    res.status(400).json({ message: "Invalid request. Id is missing." });
-  }
-  let book = await Book.findByIdAndDelete(id);
-  if (!book) {
-    res.status(400).json({ message: "Book is missing." });
-  }
-  res.json({message:'successfully deleted', data:{book}})
-});
+export const getBookById = getDocumentById(Book, { path: "categories" });
+export const postBook = creatDocument(Book);
+export const updateBookById = updateDocumentById(Book);
+export const deleteBookById = deleteDocumentById(Book);

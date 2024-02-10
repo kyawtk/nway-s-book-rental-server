@@ -2,6 +2,7 @@ import fs from "fs";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import Book from "./models/book.model.js";
+import Category from "./models/category.model.js";
 
 dotenv.config();
 
@@ -16,11 +17,11 @@ DB.once("connected", () => {
   console.log("MongoDB connected successfully");
 });
 
-const books = JSON.parse(fs.readFileSync(`./books.json`, "utf-8"));
+const books = JSON.parse(fs.readFileSync(`./categories.json`, "utf-8"));
 
 const importData = async () => {
   try {
-    await Book.create(books);
+    await Category.create(books);
     console.log("Data successfully loaded");
   } catch (err) {
     console.log(err);
