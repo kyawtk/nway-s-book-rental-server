@@ -36,9 +36,9 @@ export const getBooks = catchAsync(async (req, res, next) => {
     $or: [
       { name: { $regex: new RegExp(query, 'i') } },
       { author: { $regex: new RegExp(query, 'i') } },
+      
       // Add more fields to search if needed
-    ],
-  });
+    ], }).sort({'createdAt': 1});
 
   res.status(200).json({
     status: 'success',

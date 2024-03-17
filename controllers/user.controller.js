@@ -12,7 +12,7 @@ export const getAllUsers = catchAsync(async (req, res, next) => {
 });
 
 export const getUserById = catchAsync(async (req, res, next) => {
-  const user = await User.findById(req.params.id);
+  const user = await User.findById(req.params.id).populate('bookedBookes');
   res.status(200).json({
     status: "success",
     data: {
